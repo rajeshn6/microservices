@@ -12,3 +12,5 @@ public interface UserFeignClient {
 	@GetMapping("/user-api/users/{userEmail}")
 	public UserDto findUser(@PathVariable String userEmail);
 }
+//UserDto response=restTemplate.getForObject("http://USER-SERVICE/user-api/users/"+userEmail,UserDto.class);
+//System.out.println(response);

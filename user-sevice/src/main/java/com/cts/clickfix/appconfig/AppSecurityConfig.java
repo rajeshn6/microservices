@@ -24,7 +24,7 @@ public class AppSecurityConfig {
 	
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-		httpSecurity.authorizeHttpRequests(auth -> auth.requestMatchers("/user-api/users", "/user-api/users/login")
+		httpSecurity.authorizeHttpRequests(auth -> auth.requestMatchers("/user-api/users","/user-api/users/{email}", "/user-api/users/login")
 				.permitAll()
 //				.requestMatchers(HttpMethod.GET, "/mechanic-api/mechanics/{mechanicId}").hasRole("USER")
 //				.requestMatchers("/mechanic-api/**").hasRole("ADMIN")
